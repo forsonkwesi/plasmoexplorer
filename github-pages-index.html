@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlasmoGene Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PlasmoGene Explorer</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <div class="container">
+                <h2>Search Plasmodium falciparum Genes</h2>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Enter gene ID, name, or cell line...">
+                    <button id="search-button">Search</button>
+                </div>
+                <div class="filter-container">
+                    <select id="cell-line-filter">
+                        <option value="">Select Cell Line</option>
+                        <option value="Dd2">Dd2</option>
+                        <option value="3D7">3D7</option>
+                        <option value="C710">C710</option>
+                    </select>
+                    <input type="number" id="cnv-filter" placeholder="Min CNVs">
+                    <input type="text" id="chromosome-filter" placeholder="Chromosome">
+                </div>
+            </div>
+        </section>
+
+        <section id="results-section">
+            <div class="container">
+                <h2>Search Results</h2>
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>Gene ID</th>
+                            <th>Gene Name</th>
+                            <th>Chromosome</th>
+                            <th>CNVs</th>
+                            <th>Mutations</th>
+                            <th>Cell Line</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="featured-genes">
+            <div class="container">
+                <h2>Featured Genes</h2>
+                <div class="gene-cards">
+                    <!-- Featured genes will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PlasmoGene Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
